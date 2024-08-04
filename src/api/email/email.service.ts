@@ -33,7 +33,7 @@ export class EmailService {
         from: process.env.EMAIL_USER,
         to: userEmail,
         subject: '[my-link-tree] 이메일 인증 요청 메일입니다.',
-        html: `<p> 당신의 인증코드 4자리 코드는 ${verifyCode} 입니다..! </p>`,
+        html: `<p> 당신의 인증코드 8자리 코드는 ${verifyCode} 입니다..! </p>`,
       };
 
       user.updateOne({ verifyCode }).exec();
